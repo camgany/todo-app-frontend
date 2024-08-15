@@ -1,0 +1,24 @@
+<h2>Task List</h2>
+<table class="mat-table mat-elevation-z8">
+  <thead class="mat-header">
+    <tr>
+      <th class="mat-header-cell">Nombre</th>
+      <th class="mat-header-cell">Descripcion</th>
+      <th class="mat-header-cell">Estatus</th>
+      <th class="mat-header-cell">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (task of tasks; track task.id) {
+      <tr>
+        <td>{{task.name_task}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.status}}</td>
+        <td>
+          <button color="primary" (click)="updateTask(task.id)">Edit</button>
+          <button color="warn" (click)="deleteTask(task.id)">Delete</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

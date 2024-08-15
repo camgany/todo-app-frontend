@@ -1,0 +1,22 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Task</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" id="name_task" required [(ngModel)]="task.name_task" name="name_task">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" id="description" required [(ngModel)]="task.description" name="description">
+    </div>
+
+    <div class="form-group">
+        <label>Status</label>
+        <input type="text" class="form-control" id="status" required [(ngModel)]="task.status" name="status">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+
+</div>
